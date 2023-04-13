@@ -9,11 +9,12 @@ public class MenuPage extends Base {
         super(browser);
     }
 
+    @FindBy(xpath = "//a[@href='/dynamicid']")
+    private WebElement DynamicIDMenuButton;
+
     public void Click_dynamicId(){
         browser.logger.info("Choose DynamicButtonIdTest");
         this.DynamicIDMenuButton.click();
     }
 
-    @FindBy(xpath = "//a[@href='/dynamicid']")
-    private WebElement DynamicIDMenuButton;
 }

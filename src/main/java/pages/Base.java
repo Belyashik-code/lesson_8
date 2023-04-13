@@ -11,7 +11,7 @@ public class Base {
 
     public Base(Browser browser) {
         this.browser = browser;
-        driver = browser._driver;
+        driver = browser.driver;
         PageFactory.initElements(driver, this);
     }
 

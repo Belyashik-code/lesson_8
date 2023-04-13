@@ -19,7 +19,7 @@ public class HomePageTests {
 
     @AfterClass()
     public void tearDown() {
-        browser._driver.quit();
+        browser.driver.quit();
     }
 
 }

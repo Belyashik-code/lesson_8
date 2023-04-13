@@ -10,11 +10,13 @@ public class DynamicIDPage extends Base {
         super(browser);
     }
 
+    @FindBy(xpath = "//button[text()='Button with Dynamic ID']")
+    private WebElement DynamicIDButton;
+
     public void ClickDynamicIDButton(){
         browser.logger.info("Click Dyniamic ID Button");
         DynamicIDButton.click();
     }
 
-    @FindBy(xpath = "//button[text()='Button with Dynamic ID']")
-    private WebElement DynamicIDButton;
+
 }

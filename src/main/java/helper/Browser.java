@@ -30,15 +30,15 @@ public class Browser {
         System.setProperty("webdriver.chrome.driver", seleniumFolderPath + "chromeDriver");
         capabilities.setBrowserName("chrome");
         capabilities.setCapability(ChromeOptions.CAPABILITY, chrome_options);
-        _driver = new ChromeDriver();
+        driver = new ChromeDriver();
     }
 
     public void navigateTo(String url) {
-        _driver.get(url);
+        driver.get(url);
     }
 
     public void navigateToBaseUrl() {
-        _driver.get(getBaseUrl());
+        driver.get(getBaseUrl());
     }
 
     public String getBrowser() {
@@ -65,7 +65,7 @@ public class Browser {
     }
 
     // Public properties
-    public WebDriver _driver;
+    public WebDriver driver;
 
     // Private properties
     private DesiredCapabilities capabilities;
